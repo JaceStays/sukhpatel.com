@@ -349,6 +349,44 @@ h2 {
   color: var(--gold-soft);
 }
 
+.feed-preview-list {
+  display: grid;
+  gap: 0.75rem;
+}
+
+.feed-preview-item {
+  display: grid;
+  grid-template-columns: 96px 1fr;
+  gap: 0.7rem;
+  align-items: start;
+  padding-bottom: 0.65rem;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+}
+
+.feed-preview-image {
+  width: 96px;
+  height: 72px;
+  object-fit: cover;
+  border-radius: 0.3rem;
+  background: #101822;
+}
+
+.feed-preview-content a {
+  color: var(--text);
+  display: inline-block;
+  margin-bottom: 0.25rem;
+}
+
+.feed-preview-content a:hover {
+  color: var(--gold-soft);
+}
+
+.feed-date {
+  margin: 0;
+  font-size: 0.78rem;
+  color: #9fb1c5;
+}
+
 @media (max-width: 860px) {
   .site-nav {
     display: none;

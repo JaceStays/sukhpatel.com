@@ -1,0 +1,9 @@
+{
+  "name": "sukhpatel-site",
+  "private": true,
+  "version": "1.0.0",
+  "description": "Static site with Netlify feed functions",
+  "dependencies": {
+    "rss-parser": "^3.13.0"
+  }
+}
