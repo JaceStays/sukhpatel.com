@@ -1,0 +1,150 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      name="description"
+      content="Live market insights for Vancouver real estate with trusted sources, news, and social feed monitoring."
+    />
+    <title>Market Insights | Sukh Patel</title>
+    <link rel="icon" type="image/svg+xml" href="assets/images/favicon.svg" />
+    <link rel="stylesheet" href="assets/css/styles.css" />
+  </head>
+  <body>
+    <header class="site-header">
+      <div class="container nav-wrap">
+        <a class="brand" href="index.html">Sukh Patel</a>
+        <nav class="site-nav">
+          <a href="index.html#about">About</a>
+          <a href="index.html#services">Services</a>
+          <a href="market-insights.html">Market Insights</a>
+          <a href="index.html#contact">Contact</a>
+        </nav>
+      </div>
+    </header>
+
+    <main>
+      <section class="section insights-hero">
+        <div class="container">
+          <p class="section-label">Market Insights</p>
+          <h1>Current Vancouver real estate intelligence from reliable sources.</h1>
+          <p class="intro">
+            This page centralizes macro indicators, policy updates, and high-signal
+            news/social feeds used to track real-time market direction.
+          </p>
+        </div>
+      </section>
+
+      <section class="section">
+        <div class="container">
+          <p class="section-label">Live Market Dashboard</p>
+          <h2>Macro and market data relevant to housing decisions</h2>
+          <div class="card">
+            <div class="tradingview-widget-container">
+              <div class="tradingview-widget-container__widget"></div>
+              <script
+                type="text/javascript"
+                src="https://s3.tradingview.com/external-embedding/embed-widget-market-overview.js"
+                async
+              >
+                {
+                  "colorTheme": "dark",
+                  "dateRange": "12M",
+                  "showChart": true,
+                  "locale": "en",
+                  "isTransparent": true,
+                  "showSymbolLogo": false,
+                  "width": "100%",
+                  "height": "500",
+                  "tabs": [
+                    {
+                      "title": "Rates + FX",
+                      "symbols": [
+                        { "s": "FX:USDCAD", "d": "USD/CAD" },
+                        { "s": "TVC:US10Y", "d": "US 10Y Yield" },
+                        { "s": "TVC:CA10Y", "d": "Canada 10Y Yield" }
+                      ]
+                    },
+                    {
+                      "title": "Equity Benchmarks",
+                      "symbols": [
+                        { "s": "TSX:XIU", "d": "TSX 60 ETF" },
+                        { "s": "AMEX:SPY", "d": "S&P 500 ETF" },
+                        { "s": "NASDAQ:QQQ", "d": "NASDAQ 100 ETF" }
+                      ]
+                    }
+                  ]
+                }
+              </script>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="section section-dark">
+        <div class="container">
+          <p class="section-label">Reliable Sources</p>
+          <h2>Primary Canadian housing and policy datasets</h2>
+          <div class="source-grid">
+            <a class="card source-card" href="https://www.crea.ca/housing-market-stats/"
+              >CREA Housing Market Stats</a
+            >
+            <a class="card source-card" href="https://www.bcrea.bc.ca/economics/"
+              >BCREA Economics and Forecasts</a
+            >
+            <a class="card source-card" href="https://www.cmhc-schl.gc.ca/professionals/housing-markets-data-and-research"
+              >CMHC Housing Data + Research</a
+            >
+            <a class="card source-card" href="https://www.bankofcanada.ca/"
+              >Bank of Canada (Rates + Releases)</a
+            >
+            <a class="card source-card" href="https://www150.statcan.gc.ca/"
+              >Statistics Canada Data Portal</a
+            >
+            <a class="card source-card" href="https://www.rebgv.org/market-watch/monthly-market-report.html"
+              >REBGV Monthly Market Report</a
+            >
+          </div>
+        </div>
+      </section>
+
+      <section class="section">
+        <div class="container feed-grid">
+          <div>
+            <p class="section-label">X Feed</p>
+            <h2>Institutional and market commentary</h2>
+            <a
+              class="twitter-timeline"
+              data-theme="dark"
+              data-height="640"
+              href="https://twitter.com/CREA_ACI?ref_src=twsrc%5Etfw"
+              >Posts by CREA</a
+            >
+          </div>
+          <div>
+            <p class="section-label">Reddit Feed</p>
+            <h2>Community sentiment and market discussion</h2>
+            <div class="reddit-frame-wrap">
+              <iframe
+                title="Reddit RealEstateCanada feed"
+                src="https://www.redditmedia.com/r/RealEstateCanada/top/?t=week&embed=true"
+                loading="lazy"
+                class="reddit-frame"
+              ></iframe>
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <footer class="site-footer">
+      <div class="container">
+        <p>&copy; <span id="year"></span> Sukh Patel. Vancouver Real Estate Analyst.</p>
+      </div>
+    </footer>
+
+    <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
+    <script src="assets/js/main.js"></script>
+  </body>
+</html>

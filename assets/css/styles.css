@@ -270,6 +270,49 @@ h2 {
   font-size: 0.9rem;
 }
 
+.insights-hero {
+  padding-top: 6rem;
+  padding-bottom: 3.4rem;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+}
+
+.source-grid {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 0.9rem;
+  margin-top: 1.6rem;
+}
+
+.source-card {
+  display: flex;
+  align-items: center;
+  min-height: 92px;
+  transition: border-color 0.2s ease, transform 0.2s ease;
+}
+
+.source-card:hover {
+  border-color: rgba(215, 181, 109, 0.62);
+  transform: translateY(-2px);
+}
+
+.feed-grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 1.4rem;
+}
+
+.reddit-frame-wrap {
+  border: 1px solid rgba(215, 181, 109, 0.2);
+  background: rgba(255, 255, 255, 0.02);
+  min-height: 640px;
+}
+
+.reddit-frame {
+  width: 100%;
+  height: 640px;
+  border: 0;
+}
+
 @media (max-width: 860px) {
   .site-nav {
     display: none;
@@ -294,6 +337,14 @@ h2 {
   }
 
   .cards {
+    grid-template-columns: 1fr;
+  }
+
+  .source-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .feed-grid {
     grid-template-columns: 1fr;
   }
 
