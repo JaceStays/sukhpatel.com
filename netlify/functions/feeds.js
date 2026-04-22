@@ -16,11 +16,11 @@ const FEEDS = {
   news: [
     {
       name: "The Globe and Mail - Real Estate",
-      url: "https://www.theglobeandmail.com/real-estate/?service=rss",
+      url: "https://www.theglobeandmail.com/arc/outboundfeeds/rss/category/real-estate/",
     },
     {
       name: "CTV News Vancouver",
-      url: "https://bc.ctvnews.ca/rss/bc_ctvnews_ca-public-rss-1.822306",
+      url: "https://news.google.com/rss/search?q=site:bc.ctvnews.ca+vancouver+real+estate&hl=en-CA&gl=CA&ceid=CA:en",
     },
     {
       name: "CBC British Columbia",
