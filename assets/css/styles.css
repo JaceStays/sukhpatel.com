@@ -1,0 +1,228 @@
+:root {
+  --bg: #0b1118;
+  --panel: #111a24;
+  --text: #edf2f7;
+  --muted: #c9d2dc;
+  --gold: #d7b56d;
+  --gold-soft: #f3dfaf;
+  --line: rgba(215, 181, 109, 0.32);
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+html,
+body {
+  margin: 0;
+  padding: 0;
+  font-family: "Inter", "Avenir Next", Avenir, "Segoe UI", sans-serif;
+  color: var(--text);
+  background: radial-gradient(circle at top left, #152434, var(--bg) 55%);
+}
+
+img {
+  max-width: 100%;
+  display: block;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+.container {
+  width: min(1080px, 92vw);
+  margin: 0 auto;
+}
+
+.site-header {
+  position: sticky;
+  top: 0;
+  z-index: 20;
+  backdrop-filter: blur(8px);
+  background: rgba(11, 17, 24, 0.86);
+  border-bottom: 1px solid rgba(255, 255, 255, 0.06);
+}
+
+.nav-wrap {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  min-height: 72px;
+}
+
+.brand {
+  font-size: 1.1rem;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: var(--gold-soft);
+}
+
+.site-nav {
+  display: flex;
+  gap: 1.2rem;
+}
+
+.site-nav a {
+  color: var(--muted);
+  font-size: 0.95rem;
+}
+
+.site-nav a:hover {
+  color: var(--gold-soft);
+}
+
+.hero {
+  position: relative;
+  min-height: 78vh;
+  display: flex;
+  align-items: center;
+  background-image: linear-gradient(
+      120deg,
+      rgba(9, 12, 18, 0.82),
+      rgba(9, 12, 18, 0.58)
+    ),
+    url("../images/hero-pattern.svg");
+  background-size: cover;
+  background-position: center;
+}
+
+.hero-overlay {
+  position: absolute;
+  inset: 0;
+  border-bottom: 1px solid var(--line);
+}
+
+.hero-content {
+  position: relative;
+  z-index: 1;
+  padding: 5rem 0;
+}
+
+.eyebrow,
+.section-label {
+  color: var(--gold);
+  text-transform: uppercase;
+  letter-spacing: 0.14em;
+  font-size: 0.78rem;
+  margin: 0 0 1rem;
+}
+
+h1,
+h2,
+h3 {
+  margin: 0 0 1rem;
+  line-height: 1.2;
+}
+
+h1 {
+  font-size: clamp(2rem, 5vw, 3.8rem);
+  max-width: 16ch;
+}
+
+h2 {
+  font-size: clamp(1.45rem, 3.4vw, 2.2rem);
+  max-width: 24ch;
+}
+
+.intro {
+  max-width: 58ch;
+  color: var(--muted);
+  margin-bottom: 2rem;
+}
+
+.btn {
+  display: inline-block;
+  padding: 0.82rem 1.2rem;
+  border-radius: 0.35rem;
+  border: 1px solid var(--gold);
+  color: var(--gold-soft);
+  font-weight: 600;
+  transition: 0.2s ease;
+}
+
+.btn:hover {
+  transform: translateY(-1px);
+  background: rgba(215, 181, 109, 0.12);
+}
+
+.section {
+  padding: 4.8rem 0;
+}
+
+.section-dark {
+  background: linear-gradient(180deg, rgba(17, 26, 36, 0.85), #0a1016);
+  border-top: 1px solid rgba(255, 255, 255, 0.07);
+  border-bottom: 1px solid rgba(255, 255, 255, 0.07);
+}
+
+.grid-two {
+  display: grid;
+  gap: 2.2rem;
+  grid-template-columns: 1.3fr 1fr;
+}
+
+.grid-two p,
+.card p,
+.market-block ul,
+.contact-block p {
+  color: var(--muted);
+}
+
+.cards {
+  margin-top: 2rem;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1rem;
+}
+
+.card {
+  background: rgba(255, 255, 255, 0.02);
+  border: 1px solid rgba(215, 181, 109, 0.2);
+  border-radius: 0.5rem;
+  padding: 1.2rem;
+}
+
+.market-block ul {
+  margin: 1rem 0 0;
+  padding-left: 1.2rem;
+}
+
+.market-block li {
+  margin-bottom: 0.7rem;
+}
+
+.contact-block {
+  display: flex;
+  gap: 2rem;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.site-footer {
+  padding: 1.2rem 0 2rem;
+  color: #9fb1c5;
+  font-size: 0.9rem;
+}
+
+@media (max-width: 860px) {
+  .site-nav {
+    display: none;
+  }
+
+  .grid-two {
+    grid-template-columns: 1fr;
+  }
+
+  .cards {
+    grid-template-columns: 1fr;
+  }
+
+  .contact-block {
+    align-items: flex-start;
+    flex-direction: column;
+  }
+}
