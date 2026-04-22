@@ -102,6 +102,29 @@ a {
   padding: 5rem 0;
 }
 
+.hero-grid {
+  display: grid;
+  grid-template-columns: minmax(0, 1.1fr) minmax(280px, 420px);
+  gap: 2.2rem;
+  align-items: center;
+}
+
+.hero-copy {
+  max-width: 640px;
+}
+
+.hero-image-wrap {
+  justify-self: end;
+}
+
+.hero-image {
+  width: min(100%, 400px);
+  border-radius: 0.6rem;
+  border: 1px solid rgba(215, 181, 109, 0.38);
+  box-shadow: 0 24px 50px rgba(0, 0, 0, 0.35);
+  background: #0f1822;
+}
+
 .eyebrow,
 .section-label {
   color: var(--gold);
@@ -211,6 +234,18 @@ h2 {
 @media (max-width: 860px) {
   .site-nav {
     display: none;
+  }
+
+  .hero-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .hero-image-wrap {
+    justify-self: start;
+  }
+
+  .hero-image {
+    width: min(100%, 340px);
   }
 
   .grid-two {
