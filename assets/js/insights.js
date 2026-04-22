@@ -108,4 +108,3 @@ const hydrateFeedGroup = async (targetId, group) => {
 };
 
 hydrateFeedGroup("news-feeds", "news");
-hydrateFeedGroup("reddit-feeds", "reddit");

@@ -30,24 +30,6 @@ const FEEDS = {
       name: "The Province - Local News",
       url: "https://theprovince.com/category/news/local-news/feed",
     },
-    {
-      name: "BNN Bloomberg",
-      url: "https://www.bnnbloomberg.ca/polopoly_fs/1.1!/feed/rss.xml",
-    },
-    {
-      name: "CNN Business",
-      url: "https://rss.cnn.com/rss/money_latest.rss",
-    },
-  ],
-  reddit: [
-    {
-      name: "r/RealEstateCanada",
-      url: "https://www.reddit.com/r/RealEstateCanada/.rss",
-    },
-    {
-      name: "r/Vancouver",
-      url: "https://www.reddit.com/r/vancouver/.rss",
-    },
   ],
 };
 
